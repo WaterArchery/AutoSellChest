@@ -1,0 +1,125 @@
+Prefix: '&7[&bAutoSellChest&7]'
+ChestCreated: '&bAuto Sell Chest &7created successfully. You can see menus with right clicking to it.'
+BoughtChest: '&7You successfully bought the &bAuto Sell Chest&7. Place it to activate.'
+NotEnoughMoney: '&7You don''t have enough money to buy this.'
+AlreadyHaveChest: '&7You already have an &bAuto Sell chest&7. You have to delete it with &b/asc delete &7to open a new one.'
+ChestRemoved: '&7You successfully deleted your &bAuto Sell Chest&7.'
+YouDontHaveChest: '&7You don''t have any chest.'
+CantRemoveWithBreakOwner: '&7You can''t remove &bAuto Sell Chest&7 with breaking. You have to use &b/asc delete &7command to delete it.'
+CantRemoveWithBreakOther: '&7You can''t break this chest because it belongs to &b%player%&7.'
+StartedSelling: '&7You started your &bAuto Selling Chest&7. You can stop it with command &b/asc stop'
+StoppedSelling: '&7You stopped your &bAuto Selling Chest&7. You can stop it with command &b/asc start'
+ItemsSaved: '&7You successfully saved your items to database.'
+ItemsSold: '&7Items in your &bAuto Sell Chest &7successfully sold. You can collect &b%money%$ &7it with &b/asc collect'
+MoneyCollected: '&7You &b%money%$ &7collected from your &bAuto Selling Chest&7.'
+NoMoneyToCollected: '&7Your balance is &b0$ &7so you can''t collect anything.'
+PlayerNotFound: '&7Target player &b%player% &7is not found.'
+ChestRemovedAdmin: '&7You successfully deleted chest of &b%player%&7.'
+ChestRemovedPlayer: '&7Your chest deleted chest by &b%player%&7.'
+NoPermission: '&7You don''t have enough permission to use this command.'
+HelpCommand:
+  - '&7You can use &b/asc get &7to get a chest.'
+  - '&7You can use &b/asc delete &7to delete your chest.'
+  - '&7You can use &b/asc collect &7to collect your chest.'
+  - '&7You can use &b/asc help &7to see this message.'
+TimeNames:
+  Hour: 'hour'
+  Hours: 'hours'
+  Minute: 'minute'
+  Minutes: 'minutes'
+  Second: 'second'
+  Seconds: 'seconds'
+  Now: '&a&lNOW'
+MoneyCollectedTitle:
+  Title: '&b+%money%$'
+  SubTitle: '&7Added to your account'
+NoMoneyTitle:
+  Title: '&bAuto Sell chest'
+  SubTitle: '&cYour balance is 0'
+ItemsAddedOrRemovedTitle:
+  Title: '&bItems Saved'
+  SubTitle: '&7Added or removed items from your chest'
+ChestPlacedTitle:
+  Title: '&bAuto Sell Chest'
+  SubTitle: '&7Chest Created Successfully'
+Status:
+  working: "&a&lWORKING"
+  stopped: "&c&lSTOPPED"
+ChestItem:
+  Material: CHEST
+  Name: '&aAuto Sell Chest'
+  Lore:
+    - ''
+    - ' &8➟ &7You can place this'
+    - ' &8➟ &7chest to create'
+    - ' &8➟ &7auto selling chest'
+HologramLines:
+  - '&b&lAUTO SELL CHEST'
+  - ''
+  - '&7Status: %status%'
+  - '&7Items: &b%items%'
+  - '&7Money: &b%money%'
+  - '&7Sell Time: &b%time%'
+  - ''
+  - '&7Right Click To Manage'
+Menus:
+  ChestMenu:
+    Size: 27
+    Title: '&8Auto Sell Chest - &bMain'
+    Filler: 'GRAY_STAINED_GLASS_PANE'
+    Items:
+      ManageItems:
+        Name: '&aManage Your Items'
+        Block: 'CHEST'
+        Slot: 10
+        Lore:
+          - ''
+          - ' &8➟ &7You can see all '
+          - ' &8➟ &7your items here '
+          - ' &8➟ &7and you can add them '
+          - ''
+          - ' &8[&a❤&8] &6Usage: &7/asc chest '
+      Money:
+        Name: '&aCollect Money'
+        Block: 'SUNFLOWER'
+        Slot: 13
+        Lore:
+          - ''
+          - ' &8➟ &7You have &a%money% '
+          - ' &8➟ &7uncollected money to collect'
+          - ''
+          - ' &8➟ &7Click to collect '
+          - ''
+          - ' &8[&a❤&8] &6Usage: &7/asc collect '
+      Start:
+        Name: '&aStart Chest'
+        Block: 'LIME_WOOL'
+        Slot: 16
+        Lore:
+          - ''
+          - ' &8➟ &7Click here to &astart'
+          - ' &8➟ &7your auto selling chest '
+          - ''
+          - ' &8[&a❤&8] &6Usage: &7/asc start '
+      Stop:
+        Name: '&aStop Chest'
+        Block: 'RED_WOOL'
+        Slot: 16
+        Lore:
+          - ''
+          - ' &8➟ &7Click here to &cstop '
+          - ' &8➟ &7your auto selling chest '
+          - ''
+          - ' &8[&a❤&8] &6Usage: &7/asc stop '
+  ManageItems:
+    Size: 54
+    Title: '&8Auto Sell Chest - &bManage Items'
+    Items:
+      ManageItems:
+        Name: '&aManage Your Items'
+        Block: 'CHEST'
+        Slot: 4
+        Lore:
+          - ''
+          - ' &8➟ &7Place your items '
+          - ' &8➟ &7here to sell them '
