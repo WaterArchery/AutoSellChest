@@ -1,3 +1,5 @@
+#If you are using this plugin on legacy (1.12.2 or below)
+#You have to change some menu items or the items will be turned into bedrock.
 Prefix: '&7[&bAutoSellChest&7]'
 ChestCreated: '&bAuto Sell Chest &7created successfully. You can see menus with right clicking to it.'
 BoughtChest: '&7You successfully bought the &bAuto Sell Chest&7. Place it to activate.'

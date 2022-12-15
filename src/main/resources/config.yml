@@ -9,6 +9,8 @@ IntervalHoloReplacer: 15
 #In how many seconds do you want to save data to data file
 DataSaveInterval: 30
 #You can set these sounds '' to disable them
+#If you are using this plugin on 1.8
+#You have to change these sounds.
 MoneyCollectedSound: 'ENTITY_PLAYER_LEVELUP'
 CreatedChestSound: 'ENTITY_PLAYER_LEVELUP'
 DeletedChestSound: 'ENTITY_VILLAGER_HURT'

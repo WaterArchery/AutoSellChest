@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
+
 public class SoundAndTitleHandler {
 
     public static void SendSound(String path, Player p){
@@ -19,14 +20,11 @@ public class SoundAndTitleHandler {
         }
     }
 
-    public static void SendTitle(Player p, String title, String subtitle){
-        if (isLegacy()) {
-        }
-        else {
-            p.sendTitle(title, subtitle, 10, 40, 10);
-        }
+    public static void SendTitle(Player p, String titleText, String subtitleText){
+            p.sendTitle(titleText, subtitleText, 10, 40, 10);
     }
 
+    //Just in case I need it
     public static boolean isLegacy(){
         return Bukkit.getVersion().contains("1.8") || Bukkit.getVersion().contains("1.9")
                 || Bukkit.getVersion().contains("1.10") || Bukkit.getVersion().contains("1.11")
