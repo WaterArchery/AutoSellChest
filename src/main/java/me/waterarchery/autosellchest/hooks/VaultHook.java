@@ -1,4 +1,4 @@
-package tr.waterarchery.autosellchest.hooks;
+package me.waterarchery.autosellchest.hooks;
 
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;

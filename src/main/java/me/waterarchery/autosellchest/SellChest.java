@@ -1,15 +1,15 @@
-package tr.waterarchery.autosellchest;
+package me.waterarchery.autosellchest;
 
 import eu.decentsoftware.holograms.api.DHAPI;
 import me.filoghost.holographicdisplays.api.HolographicDisplaysAPI;
 import me.filoghost.holographicdisplays.api.hologram.Hologram;
+import me.waterarchery.autosellchest.menus.ManageItemsMenu;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import tr.waterarchery.autosellchest.handlers.ConfigManager;
-import tr.waterarchery.autosellchest.handlers.PriceHandler;
-import tr.waterarchery.autosellchest.menus.ManageItemsMenu;
+import me.waterarchery.autosellchest.handlers.ConfigManager;
+import me.waterarchery.autosellchest.handlers.PriceHandler;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

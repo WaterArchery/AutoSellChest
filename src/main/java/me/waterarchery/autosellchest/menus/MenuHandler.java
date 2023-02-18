@@ -1,11 +1,11 @@
-package tr.waterarchery.autosellchest.menus;
+package me.waterarchery.autosellchest.menus;
 
+import me.waterarchery.autosellchest.handlers.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import tr.waterarchery.autosellchest.handlers.ConfigManager;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package tr.waterarchery.autosellchest.hooks;
+package me.waterarchery.autosellchest.hooks;
 
 import com.earth2me.essentials.Essentials;
 import org.bukkit.Bukkit;

@@ -1,14 +1,14 @@
-package tr.waterarchery.autosellchest.events;
+package me.waterarchery.autosellchest.listeners;
 
+import me.waterarchery.autosellchest.AutoSellMain;
+import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.handlers.ConfigManager;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
-import tr.waterarchery.autosellchest.AutoSellMain;
-import tr.waterarchery.autosellchest.SellChest;
-import tr.waterarchery.autosellchest.handlers.ConfigManager;
 
 public class ChestBreakEvent implements Listener {
 

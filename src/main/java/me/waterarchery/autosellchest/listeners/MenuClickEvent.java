@@ -1,4 +1,4 @@
-package tr.waterarchery.autosellchest.events;
+package me.waterarchery.autosellchest.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -7,10 +7,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
-import tr.waterarchery.autosellchest.SellChest;
-import tr.waterarchery.autosellchest.handlers.ChestHandler;
-import tr.waterarchery.autosellchest.handlers.ConfigManager;
-import tr.waterarchery.autosellchest.menus.MenuHandler;
+import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.handlers.ChestHandler;
+import me.waterarchery.autosellchest.handlers.ConfigManager;
+import me.waterarchery.autosellchest.menus.MenuHandler;
 
 public class MenuClickEvent implements Listener {
 

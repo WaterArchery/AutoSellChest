@@ -35,6 +35,9 @@ TimeNames:
 MoneyCollectedTitle:
   Title: '&b+%money%$'
   SubTitle: '&7Added to your account'
+NoSpaceTitle:
+  Title: '&bcNO SPACE'
+  SubTitle: '&7You don''t have enough space'
 NoMoneyTitle:
   Title: '&bAuto Sell chest'
   SubTitle: '&cYour balance is 0'

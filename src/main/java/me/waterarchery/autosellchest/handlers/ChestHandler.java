@@ -1,20 +1,19 @@
-package tr.waterarchery.autosellchest.handlers;
+package me.waterarchery.autosellchest.handlers;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
+import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.menus.ManageItemsMenu;
+import org.bukkit.*;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import tr.waterarchery.autosellchest.AutoSellMain;
-import tr.waterarchery.autosellchest.SellChest;
-import tr.waterarchery.autosellchest.menus.ManageItemsMenu;
+import me.waterarchery.autosellchest.AutoSellMain;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -143,6 +142,25 @@ public class ChestHandler {
         ConfigManager.SaveData();
     }
 
+
+    public static void StartParticleSpawn(){
+        Plugin pl = AutoSellMain.getPlugin();
+        if (ConfigManager.getConfig().getBoolean("UseParticles")) {
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    ArrayList<Chunk> loadedChunks = new ArrayList<>();
+                    for (World w : Bukkit.getWorlds()) {
+                        loadedChunks.addAll(Arrays.asList(w.getLoadedChunks()));
+                    }
+                    for (SellChest chest : AutoSellMain.getSellChests()) {
+                        chest.getLoc().getWorld().isChunkLoaded(null);
+                    }
+
+                }
+            }.runTaskTimer(pl, 2, 2);
+        }
+    }
 
     public static void StartRemainingTime(){
         int holoUpdateTime = ConfigManager.getConfig().getInt("IntervalHoloReplacer");

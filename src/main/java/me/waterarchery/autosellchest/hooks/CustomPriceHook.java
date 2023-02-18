@@ -1,7 +1,7 @@
-package tr.waterarchery.autosellchest.hooks;
+package me.waterarchery.autosellchest.hooks;
 
 import org.bukkit.inventory.ItemStack;
-import tr.waterarchery.autosellchest.AutoSellMain;
+import me.waterarchery.autosellchest.AutoSellMain;
 
 public class CustomPriceHook {
 

@@ -1,15 +1,14 @@
-package tr.waterarchery.autosellchest;
+package me.waterarchery.autosellchest;
 
+import me.waterarchery.autosellchest.listeners.*;
+import me.waterarchery.autosellchest.handlers.ChestHandler;
+import me.waterarchery.autosellchest.handlers.ConfigManager;
+import me.waterarchery.autosellchest.handlers.MainCommand;
+import me.waterarchery.autosellchest.hooks.VaultHook;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
-import tr.waterarchery.autosellchest.events.*;
-import tr.waterarchery.autosellchest.handlers.ChestHandler;
-import tr.waterarchery.autosellchest.handlers.ConfigManager;
-import tr.waterarchery.autosellchest.handlers.MainCommand;
-import tr.waterarchery.autosellchest.hooks.VaultHook;
 
 import java.util.ArrayList;
 
@@ -18,7 +17,6 @@ public final class AutoSellMain extends JavaPlugin {
     private static Plugin pl;
     private static ArrayList<SellChest> sellChests = new ArrayList<>();
     public static int remTime;
-    public static BukkitTask task;
     private static HoloType holoType;
 
     @Override
@@ -41,7 +39,7 @@ public final class AutoSellMain extends JavaPlugin {
         ChestHandler.CreateChestItem();
         ChestHandler.StartRemainingTime();
         getServer().getPluginCommand("asc").setExecutor(new MainCommand());
-        getServer().getConsoleSender().sendMessage("§7[§bAutoSellChest§7] §7Registering plugin events");
+        getServer().getConsoleSender().sendMessage("§7[§bAutoSellChest§7] §7Registering plugin listeners");
         ConfigManager.LoadAllChestFromData();
         getServer().getConsoleSender().sendMessage("§7[§bAutoSellChest§7] §aAutoSellChest enabled §cv" + this.getDescription().getVersion());
     }

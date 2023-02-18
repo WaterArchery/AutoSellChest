@@ -6,7 +6,7 @@
 
     <groupId>tr.waterarchery</groupId>
     <artifactId>autosellchest</artifactId>
-    <version>1.07</version>
+    <version>1.10</version>
     <packaging>jar</packaging>
 
     <name>AutoSellChest</name>
@@ -35,6 +35,10 @@
                 <configuration>
                     <outputFile>C:\Users\smfar\Desktop\Sunucular\test117\plugins/AutoSellChest.jar</outputFile>
                     <relocations>
+                        <relocation>
+                            <pattern>com.github.fierioziy.particlenativeapi</pattern>
+                            <shadedPattern>tr.waterarchery.autosellchest.libs.particleapi</shadedPattern>
+                        </relocation>
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>tr.waterarchery.autosellchest.libs.bstats</shadedPattern>
@@ -96,6 +100,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.fierioziy.particlenativeapi</groupId>
+            <artifactId>ParticleNativeAPI-core</artifactId>
+            <version>3.3.1</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>net.essentialsx</groupId>
             <artifactId>EssentialsX</artifactId>

@@ -1,5 +1,8 @@
-package tr.waterarchery.autosellchest.events;
+package me.waterarchery.autosellchest.listeners;
 
+import me.waterarchery.autosellchest.AutoSellMain;
+import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.menus.ChestMenu;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -8,9 +11,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
-import tr.waterarchery.autosellchest.AutoSellMain;
-import tr.waterarchery.autosellchest.SellChest;
-import tr.waterarchery.autosellchest.menus.ChestMenu;
 
 public class ChestClickEvent implements Listener {
 

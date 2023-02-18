@@ -1,5 +1,6 @@
-package tr.waterarchery.autosellchest.handlers;
+package me.waterarchery.autosellchest.handlers;
 
+import me.waterarchery.autosellchest.SellChest;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
@@ -9,8 +10,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import tr.waterarchery.autosellchest.AutoSellMain;
-import tr.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.AutoSellMain;
 
 import java.io.File;
 import java.io.IOException;

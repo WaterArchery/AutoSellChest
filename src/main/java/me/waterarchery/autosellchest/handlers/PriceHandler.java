@@ -1,9 +1,9 @@
-package tr.waterarchery.autosellchest.handlers;
+package me.waterarchery.autosellchest.handlers;
 
+import me.waterarchery.autosellchest.hooks.CustomPriceHook;
+import me.waterarchery.autosellchest.hooks.EssentialsXHook;
+import me.waterarchery.autosellchest.hooks.ShopGUIHook;
 import org.bukkit.inventory.ItemStack;
-import tr.waterarchery.autosellchest.hooks.CustomPriceHook;
-import tr.waterarchery.autosellchest.hooks.EssentialsXHook;
-import tr.waterarchery.autosellchest.hooks.ShopGUIHook;
 
 public class PriceHandler {
 

@@ -1,14 +1,17 @@
-package tr.waterarchery.autosellchest.handlers;
+package me.waterarchery.autosellchest.handlers;
 
+import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.hooks.VaultHook;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
-import tr.waterarchery.autosellchest.AutoSellMain;
-import tr.waterarchery.autosellchest.SellChest;
-import tr.waterarchery.autosellchest.hooks.VaultHook;
+import me.waterarchery.autosellchest.AutoSellMain;
+
+import java.util.HashMap;
 
 public class MainCommand implements CommandExecutor {
 
@@ -26,22 +29,34 @@ public class MainCommand implements CommandExecutor {
                 }
                 else if (args.length == 1) {
                     if (args[0].equalsIgnoreCase("get")) {
-                        double price = pl.getConfig().getDouble("ChestPrice");
-                        if (price == 0) {
-                            p.getInventory().addItem(ChestHandler.getChestItem());
-                            ConfigManager.SendMessage(p, false, "BoughtChest");
-                        }
-                        else {
-                            double balance = VaultHook.getEconomy().getBalance(p);
-                            if (balance >= price) {
-                                VaultHook.getEconomy().withdrawPlayer(p, price);
+                        if (sender.hasPermission("asc.get")) {
+                            double price = pl.getConfig().getDouble("ChestPrice");
+                            if (price == 0) {
                                 p.getInventory().addItem(ChestHandler.getChestItem());
                                 ConfigManager.SendMessage(p, false, "BoughtChest");
-
                             }
                             else {
-                                ConfigManager.SendMessage(p, false, "NotEnoughMoney");
+                                double balance = VaultHook.getEconomy().getBalance(p);
+                                if (balance >= price) {
+                                    HashMap<Integer, ItemStack> hash = p.getInventory().addItem(ChestHandler.getChestItem());
+                                    if (hash != null) {
+                                        VaultHook.getEconomy().withdrawPlayer(p, price);
+                                        ConfigManager.SendMessage(p, false, "BoughtChest");
+                                    }
+                                    else {
+                                        String title = ConfigManager.getStringLang("NoSpaceTitle" + ".Title");
+                                        String subtitle = ConfigManager.getStringLang("NoSpaceTitle" + ".SubTitle");
+                                        SoundAndTitleHandler.SendTitle(p, title, subtitle);
+                                        SoundAndTitleHandler.SendSound("NoSpaceSound", p);
+                                    }
+                                }
+                                else {
+                                    ConfigManager.SendMessage(p, false, "NotEnoughMoney");
+                                }
                             }
+                        }
+                        else {
+                            ConfigManager.SendMessage(p, false, "NoPermission");
                         }
                         return true;
                     }

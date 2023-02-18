@@ -8,6 +8,8 @@ SellInterval: 1800
 IntervalHoloReplacer: 15
 #In how many seconds do you want to save data to data file
 DataSaveInterval: 30
+#Creates particles besides chest
+UseParticles: true
 #You can set these sounds '' to disable them
 #If you are using this plugin on 1.8
 #You have to change these sounds.
@@ -17,6 +19,7 @@ DeletedChestSound: 'ENTITY_VILLAGER_HURT'
 ClosedManageItemsMenuSound: 'ENTITY_PLAYER_LEVELUP'
 StartSellingSoundSound: 'ENTITY_PLAYER_LEVELUP'
 StopSellingSound: 'ENTITY_VILLAGER_HURT'
+NoSpaceSound: 'ENTITY_VILLAGER_HURT'
 #You can use Essentials or ShopGUIPlus or Custom for now.
 #You can edit Essentials prices in Essentials/worth.yml
 #You can edit ShopGUIPlus prices in ShopGUIPlus/shops/shop.yml

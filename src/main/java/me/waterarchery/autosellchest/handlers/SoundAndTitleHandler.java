@@ -1,4 +1,4 @@
-package tr.waterarchery.autosellchest.handlers;
+package me.waterarchery.autosellchest.handlers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;

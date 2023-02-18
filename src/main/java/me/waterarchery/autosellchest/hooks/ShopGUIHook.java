@@ -1,4 +1,4 @@
-package tr.waterarchery.autosellchest.hooks;
+package me.waterarchery.autosellchest.hooks;
 
 import net.brcdev.shopgui.ShopGuiPlusApi;
 import org.bukkit.event.Listener;

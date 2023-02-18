@@ -1,6 +1,6 @@
 name: AutoSellChest
 version: '${project.version}'
-main: tr.waterarchery.autosellchest.AutoSellMain
+main: me.waterarchery.autosellchest.AutoSellMain
 api-version: 1.13
 depend: [ Vault ]
 softdepend: [ DecentsHolograms, HolographicDisplays, Essentials, ShopGUIPlus ]
