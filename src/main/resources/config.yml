@@ -9,7 +9,9 @@ IntervalHoloReplacer: 15
 #In how many seconds do you want to save data to data file
 DataSaveInterval: 30
 #Creates particles besides chest
+#Currently disabled
 UseParticles: true
+ParticleDelayPerTick: 2
 #You can set these sounds '' to disable them
 #If you are using this plugin on 1.8
 #You have to change these sounds.

@@ -118,10 +118,6 @@ public class ConfigManager {
         return holoLines;
     }
 
-    public static void SetDataVariable(SellChest chest){
-
-    }
-
     public static void LoadAllChestFromData(){
         AutoSellMain.getSellChests().clear();
         for (String uuid : data.getConfigurationSection("").getKeys(false)) {

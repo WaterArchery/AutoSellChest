@@ -142,26 +142,6 @@ public class ChestHandler {
         ConfigManager.SaveData();
     }
 
-
-    public static void StartParticleSpawn(){
-        Plugin pl = AutoSellMain.getPlugin();
-        if (ConfigManager.getConfig().getBoolean("UseParticles")) {
-            new BukkitRunnable() {
-                @Override
-                public void run() {
-                    ArrayList<Chunk> loadedChunks = new ArrayList<>();
-                    for (World w : Bukkit.getWorlds()) {
-                        loadedChunks.addAll(Arrays.asList(w.getLoadedChunks()));
-                    }
-                    for (SellChest chest : AutoSellMain.getSellChests()) {
-                        chest.getLoc().getWorld().isChunkLoaded(null);
-                    }
-
-                }
-            }.runTaskTimer(pl, 2, 2);
-        }
-    }
-
     public static void StartRemainingTime(){
         int holoUpdateTime = ConfigManager.getConfig().getInt("IntervalHoloReplacer");
         final int[] i = {0};

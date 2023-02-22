@@ -6,7 +6,7 @@
 
     <groupId>tr.waterarchery</groupId>
     <artifactId>autosellchest</artifactId>
-    <version>1.10</version>
+    <version>1.11</version>
     <packaging>jar</packaging>
 
     <name>AutoSellChest</name>
