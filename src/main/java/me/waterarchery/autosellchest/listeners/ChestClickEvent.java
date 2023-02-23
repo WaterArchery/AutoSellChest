@@ -2,6 +2,7 @@ package me.waterarchery.autosellchest.listeners;
 
 import me.waterarchery.autosellchest.AutoSellMain;
 import me.waterarchery.autosellchest.SellChest;
+import me.waterarchery.autosellchest.handlers.ConfigManager;
 import me.waterarchery.autosellchest.menus.ChestMenu;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -11,6 +12,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
+
+import java.util.UUID;
 
 public class ChestClickEvent implements Listener {
 
@@ -24,8 +27,13 @@ public class ChestClickEvent implements Listener {
                     for (SellChest chest : AutoSellMain.getSellChests()) {
                         if (chest.getLoc().equals(block.getLocation())) {
                             e.setCancelled(true);
-                            Inventory chestInv = ChestMenu.getChestMenu(chest);
-                            p.openInventory(chestInv);
+                            if (chest.getOwner().equals(p.getUniqueId())) {
+                                Inventory chestInv = ChestMenu.getChestMenu(chest);
+                                p.openInventory(chestInv);
+                            }
+                            else {
+                                ConfigManager.SendMessage(p, false, "CantOpenThisChest");
+                            }
                             return;
                         }
                     }

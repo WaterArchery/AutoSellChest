@@ -19,6 +19,7 @@ PlayerNotFound: '&7Target player &b%player% &7is not found.'
 ChestRemovedAdmin: '&7You successfully deleted chest of &b%player%&7.'
 ChestRemovedPlayer: '&7Your chest deleted chest by &b%player%&7.'
 NoPermission: '&7You don''t have enough permission to use this command.'
+CantOpenThisChest: '&7You can''t open other user's &eauto sell chests.'
 HelpCommand:
   - '&7You can use &b/asc get &7to get a chest.'
   - '&7You can use &b/asc delete &7to delete your chest.'
